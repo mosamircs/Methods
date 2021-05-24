@@ -15,7 +15,18 @@ namespace Methods
             int FirstNumber = 20;
             int SecondNumber = 50;
             Program.Add(FirstNumber,SecondNumber);//static Method called with class name not with object  
+            int i = 0;
+            Program p1 = new Program();
+            //p1.SimpleFunction(i);//passinyg by value so it will not change because i and j referes to different memory locations
+            p1.SimpleFunction(ref i);//passing by refernece making i and j refers to same location and when function change it will affect all
+            Console.WriteLine(i);
+
            
+        }
+        //simple method
+        public void SimpleFunction(ref int j)
+        {
+            j = 100;
         }
         //making method for even numbers 
         public void EvenNumbers(int Target)
