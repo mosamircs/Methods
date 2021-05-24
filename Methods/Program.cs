@@ -10,6 +10,19 @@ namespace Methods
     {
         static void Main(string[] args)
         {
+            Program p = new Program();
+            p.EvenNumbers(30);
+        }
+        //making method for even numbers 
+        public void EvenNumbers(int Target)
+        {
+            for (int i = 2; i <= Target; i++)
+            {
+                if (i % 2 == 0)
+                {
+                    Console.WriteLine(i);
+                }
+            }
         }
     }
 }
