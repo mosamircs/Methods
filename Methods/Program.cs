@@ -28,10 +28,32 @@ namespace Methods
             int Mul;
             int Sub;
             int Div;
-            SimpleCalculator(10,0,out Sum, out Mul, out Sub, out Div);
+            SimpleCalculator(10,5,out Sum, out Mul, out Sub, out Div);
             Console.WriteLine("Sum is {0} and Sub is {1} and Mul is {2} and Div is {3}",Sum,Sub,Mul,Div);
-           
+
+            //parameters array
+            string[] Names = new string[5];
+            Names[0] = "Moahamed";
+            Names[1] = "Samir";
+            Names[2] = "mosamircs";
+            Names[3] = "MO";
+            Names[4] = "s";
+            ParamsArray();//works that making params array 
+            ParamsArray("ss", "ss", "mm", "ssss");//passing any number of arguments
+            ParamsArray(Names);
+
         }
+
+        //params array 
+        public static void ParamsArray(params string[] Names)
+        {
+            Console.WriteLine("Length of Array is{0}", Names.Length);
+            foreach(string name in Names)
+            {
+                Console.WriteLine(name);
+            }
+        }
+
         //simple method
         public void SimpleFunction(ref int j)
         {
