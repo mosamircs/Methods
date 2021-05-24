@@ -10,8 +10,12 @@ namespace Methods
     {
         static void Main(string[] args)
         {
-            Program p = new Program();
-            p.EvenNumbers(30);
+            Program p = new Program();//instance object from class program 
+            p.EvenNumbers(30);//instance Method need instance object from class to invoke and for every object it can be called with different  prameters
+            int FirstNumber = 20;
+            int SecondNumber = 50;
+            Program.Add(FirstNumber,SecondNumber);//static Method called with class name not with object  
+           
         }
         //making method for even numbers 
         public void EvenNumbers(int Target)
@@ -23,6 +27,13 @@ namespace Methods
                     Console.WriteLine(i);
                 }
             }
+        }
+        static void Add(int FirstNumber,int SecondNumber)
+        {
+            long Sum = FirstNumber + SecondNumber;
+            Console.WriteLine("Sum is {0}",Sum);
+            
+            
         }
     }
 }
